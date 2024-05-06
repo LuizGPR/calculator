@@ -30,7 +30,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: right;
-    padding: 2  rem;
+    padding: 2rem;
+    box-sizing: border-box;
 }
 
 .calculator-btns{

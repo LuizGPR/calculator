@@ -14,22 +14,23 @@
         <div class="calculator-display" id="calculatorDisplay"></div>
 
         <div class="calculator-btns" id="calculatorBtns">
-            <button type="button" class="calculator-button calculator-opr" id="calculatorPlusOpr">+</button>
-            <button type="button" class="calculator-button calculator-opr" id="calculatorMinusOpr">-</button>
-            <button type="button" class="calculator-button calculator-opr" id="calculatorMultOpr">*</button>
-            <button type="button" class="calculator-button calculator-opr" id="calculatorDivideOpr">/</button>
-            <button type="button" class="calculator-button calculator-opr" id="calculatorResultOpr">=</button>
-            <button type="button" class="calculator-button calculator-opr" id="calculatorClearOpr">CE</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">0</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">1</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">2</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">3</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">4</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">5</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">6</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">7</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">8</button>
-            <button type="button" class="calculator-button calculator-number" id="calculatorNumber">9</button>
+            <button onclick="getValue('+')" type="button" class="calculator-button calculator-opr" id="calculatorPlusOpr">+</button>
+            <button onclick="getValue('-')" type="button" class="calculator-button calculator-opr" id="calculatorMinusOpr">-</button>
+            <button onclick="getValue('*')" type="button" class="calculator-button calculator-opr" id="calculatorMultOpr">*</button>
+            <button onclick="getValue('/')" type="button" class="calculator-button calculator-opr" id="calculatorDivideOpr">/</button>
+            <button onclick="calculate()" type="button" class="calculator-button calculator-opr" id="calculatorResultOpr">=</button>
+            <button onclick="insert('.')" type="button" class="calculator-button calculator-opr" id="calculatorCommaOpr">,</button>
+            <button onclick="clearDisplay()" type="button" class="calculator-button calculator-opr" id="calculatorClearOpr">CE</button>
+            <button onclick="insert(0)" type="button" class="calculator-button calculator-number" id="calculatorZeroNumber" value="0">0</button>
+            <button onclick="insert(1)" type="button" class="calculator-button calculator-number" id="calculatorOneNumber">1</button>
+            <button onclick="insert(2)" type="button" class="calculator-button calculator-number" id="calculatorTwoNumber">2</button>
+            <button onclick="insert(3)" type="button" class="calculator-button calculator-number" id="calculatorThreeNumber">3</button>
+            <button onclick="insert(4)" type="button" class="calculator-button calculator-number" id="calculatorFourNumber">4</button>
+            <button onclick="insert(5)" type="button" class="calculator-button calculator-number" id="calculatorFiveNumber">5</button>
+            <button onclick="insert(6)" type="button" class="calculator-button calculator-number" id="calculatorSixNumber">6</button>
+            <button onclick="insert(7)" type="button" class="calculator-button calculator-number" id="calculatorSevenNumber">7</button>
+            <button onclick="insert(8)" type="button" class="calculator-button calculator-number" id="calculatorEightNumber">8</button>
+            <button onclick="insert(9)" type="button" class="calculator-button calculator-number" id="calculatorNineNumber">9</button>
         </div>
 
     </div>
