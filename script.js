@@ -1,6 +1,5 @@
 const display = document.getElementById("calculatorDisplay");
 let stValue = 0, ndValue = 0, rdValue = 0, oprValue;
-display.innerText = '0';
 
 function insert(input){
     let displayLastChar = display.innerText[display.innerText.length-1];
@@ -10,6 +9,10 @@ function insert(input){
     } else {
         display.innerText += input;
         display.value = parseFloat(display.innerText);
+    }
+    if ((displayLastChar === '.' && display.innerText.length === 1)){
+        display.innerText = `0.${input}`
+        display.value = input/10;
     }
 }
 
@@ -21,11 +24,7 @@ function getValue(opr){
 }
 
 function calculate(){
-    if(display.innerText === '0'){
-        ndValue = stValue;
-    } else {
     ndValue = display.value;
-    }
     switch (oprValue){
         case '+':
             rdValue = stValue + ndValue;
@@ -43,17 +42,14 @@ function calculate(){
             rdValue = stValue ** ndValue;
             break
     }
-    if(rdValue === 0){
-        rdValue = stValue;
-    } else {
-        display.innerText = rdValue;
-        display.value = rdValue;
-        stValue = rdValue;
-    }
+    display.innerText = rdValue;
+    display.value = rdValue;
+    stValue = rdValue;
 }
 
 function negative(){
     display.value = -(display.value);
+    display.innerText = `-${display.innerText}`
 }
 
 function clearDisplay(){
