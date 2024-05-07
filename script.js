@@ -42,8 +42,13 @@ function calculate(){
             rdValue = stValue ** ndValue;
             break
     }
-    display.innerText = rdValue;
-    display.value = rdValue;
+    if(!(Number.isInteger(rdValue))){
+        display.innerText = rdValue.toFixed(3);
+        display.value = rdValue;
+    } else {
+        display.innerText = rdValue;
+        display.value = rdValue;
+    }
     stValue = rdValue;
 }
 
