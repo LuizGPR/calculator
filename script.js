@@ -45,7 +45,8 @@ function calculate(){
     if(!(Number.isInteger(rdValue))){
         display.innerText = rdValue.toFixed(3);
         display.value = rdValue;
-    } else {
+    }
+    if(Number.isInteger(rdValue)){
         display.innerText = rdValue;
         display.value = rdValue;
     }
@@ -54,9 +55,15 @@ function calculate(){
 
 function negative(){
     display.value = -(display.value);
-    display.innerText = `-${display.innerText}`
+
+    display.innerText = `-(${display.innerText}`
 }
 
 function clearDisplay(){
-    display.innerText = '0'; display.value = 0; stValue = 0; ndValue = 0; rdValue = 0;
+    display.innerText = ''; display.value = 0; stValue = 0; ndValue = 0; rdValue = 0;
+}
+
+function eraseDigit(){
+    display.innerText = display.innerText.slice(0, display.innerText.length-1);
+    display.value = Number(display.innerText)
 }
