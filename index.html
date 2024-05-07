@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta name="author" content="Luiz Guilherme">
+    <meta name="description" content="Calculadora básica">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator" id="calculator">
+
+        <div class="calculator-display" id="calculatorDisplay"></div>
+
+        <div class="calculator-btns" id="calculatorBtns">
+            <button onclick="getValue('+')" type="button" class="calculator-button calculator-opr" id="calculatorPlusOpr">+</button>
+            <button onclick="getValue('-')" type="button" class="calculator-button calculator-opr" id="calculatorMinusOpr">-</button>
+            <button onclick="getValue('*')" type="button" class="calculator-button calculator-opr" id="calculatorMultOpr">*</button>
+            <button onclick="getValue('/')" type="button" class="calculator-button calculator-opr" id="calculatorDivideOpr">/</button>
+            <button onclick="getValue('^')" type="button" class="calculator-button calculator-opr" id="calculatorPowOpr">^</button>
+            <button onclick="calculate()" type="button" class="calculator-button calculator-opr" id="calculatorResultOpr">=</button>
+            <button onclick="insert('.')" type="button" class="calculator-button calculator-opr" id="calculatorCommaOpr">,</button>
+            <button onclick="clearDisplay()" type="button" class="calculator-button calculator-opr" id="calculatorClearOpr">CE</button>
+            <button onclick="negative()" type="button" class="calculator-button calculator-opr" id="calculatorNegOpr">Neg</button>
+            <button onclick="insert(0)" type="button" class="calculator-button calculator-number" id="calculatorZeroNumber" value="0">0</button>
+            <button onclick="insert(1)" type="button" class="calculator-button calculator-number" id="calculatorOneNumber">1</button>
+            <button onclick="insert(2)" type="button" class="calculator-button calculator-number" id="calculatorTwoNumber">2</button>
+            <button onclick="insert(3)" type="button" class="calculator-button calculator-number" id="calculatorThreeNumber">3</button>
+            <button onclick="insert(4)" type="button" class="calculator-button calculator-number" id="calculatorFourNumber">4</button>
+            <button onclick="insert(5)" type="button" class="calculator-button calculator-number" id="calculatorFiveNumber">5</button>
+            <button onclick="insert(6)" type="button" class="calculator-button calculator-number" id="calculatorSixNumber">6</button>
+            <button onclick="insert(7)" type="button" class="calculator-button calculator-number" id="calculatorSevenNumber">7</button>
+            <button onclick="insert(8)" type="button" class="calculator-button calculator-number" id="calculatorEightNumber">8</button>
+            <button onclick="insert(9)" type="button" class="calculator-button calculator-number" id="calculatorNineNumber">9</button>
+            <button type="button" class="calculator-button calculator-number" id="calculatorNoneBtn"></button>
+        </div>
+
+    </div>
+     
+    <script src="script.js"></script>
+</body>
+</html>

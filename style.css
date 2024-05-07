@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator{
+    width: 40rem;
+    height: 55rem;
+    border: .4rem solid #000;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+.calculator-display{
+    width: 100%;
+    height: 25%;
+    background-color: #333;
+    color: #fff;
+    font-size: 4.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.calculator-btns{
+    width: 100%;
+    height: 75%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.calculator-button{
+    width: 25%;
+    border: none;
+    font-size: 3.2rem;
+    transition: .2s;
+    border: .1rem solid #333;
+}
+.calculator-button:hover{
+    filter: brightness(1.5)
+}
+.calculator-button:active{
+    filter: brightness(0.75);
+}
+
+.calculator-opr{
+    background-color: #ccc;
+}
+.calculator-number{
+    background-color: #fc1;
+}
+
+#calculatorNoneBtn:hover{
+    animation: changeColor 1.2s linear infinite;
+}
+
+@keyframes changeColor {
+    0%{
+        background-color: #ffcc11;
+    }
+    14.3%{
+        background-color: #21ff11;
+    }
+    28.6%{
+        background-color: #11dfff;
+    }
+    42.9%{
+        background-color: #1125ff;
+    }
+    57.2%{
+        background-color: #ef11ff;
+    }
+    71.5%{
+        background-color: #a50084;
+    }
+    85.8%{
+        background-color: #ff1111;
+    }
+    100%{
+        background-color: #ffcc11;
+    }
+}
