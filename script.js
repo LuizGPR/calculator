@@ -44,6 +44,8 @@ function calculate(){
         case '^':
             rdValue = stValue ** ndValue;
             break
+        case undefined:
+            rdValue
     }
     if(!(Number.isInteger(rdValue))){
         display.innerText = rdValue.toFixed(3);
@@ -57,10 +59,9 @@ function calculate(){
 }
 
 function negative(){
-    if(display.value !== 0){
-        display.value = -(display.value);
-        display.innerText = `-(${display.innerText}`
-    }
+    display.value = -(display.value);
+    display.innerText = `-(${display.innerText}`
+    ndValue = display.value
 }
 
 function clearDisplay(){
