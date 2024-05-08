@@ -1,5 +1,6 @@
 const display = document.getElementById("calculatorDisplay");
 let stValue = 0, ndValue = 0, rdValue = 0, oprValue;
+display.value = 0;
 
 function insert(input){
     let displayLastChar = display.innerText[display.innerText.length-1];
@@ -14,6 +15,9 @@ function insert(input){
         display.innerText = `0.${input}`
         display.value = input/10;
     }
+    if(stValue !== 0 ){
+        ndValue = display.value;
+    }
 }
 
 function getValue(opr){
@@ -24,7 +28,6 @@ function getValue(opr){
 }
 
 function calculate(){
-    ndValue = display.value;
     switch (oprValue){
         case '+':
             rdValue = stValue + ndValue;
@@ -54,9 +57,10 @@ function calculate(){
 }
 
 function negative(){
-    display.value = -(display.value);
-
-    display.innerText = `-(${display.innerText}`
+    if(display.value !== 0){
+        display.value = -(display.value);
+        display.innerText = `-(${display.innerText}`
+    }
 }
 
 function clearDisplay(){
@@ -64,6 +68,8 @@ function clearDisplay(){
 }
 
 function eraseDigit(){
+    stValue = ndValue
     display.innerText = display.innerText.slice(0, display.innerText.length-1);
-    display.value = Number(display.innerText)
+    display.value = parseFloat(display.innerText)
+    ndValue = display.value;
 }
