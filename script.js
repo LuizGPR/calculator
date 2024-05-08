@@ -47,6 +47,9 @@ function calculate(){
         case undefined:
             rdValue
     }
+    if(isNaN(rdValue)){
+        rdValue = 0;
+    }
     if(!(Number.isInteger(rdValue))){
         display.innerText = rdValue.toFixed(3);
         display.value = rdValue;
@@ -60,7 +63,7 @@ function calculate(){
 
 function negative(){
     display.value = -(display.value);
-    display.innerText = `-${display.innerText}`
+    display.innerText = display.value
     ndValue = display.value
 }
 
@@ -72,5 +75,8 @@ function eraseDigit(){
     stValue = ndValue
     display.innerText = display.innerText.slice(0, display.innerText.length-1);
     display.value = parseFloat(display.innerText)
+    if(isNaN(display.value)){
+        display.value = 0;
+    }
     ndValue = display.value;
 }
