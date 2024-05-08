@@ -4,12 +4,12 @@ display.value = 0;
 
 function insert(input){
     let displayLastChar = display.innerText[display.innerText.length-1];
-    if((displayLastChar === '0' && display.innerText.length === 1) || display.value === Infinity || isNaN(display.value)){
+    if(display.value === 0 || display.value === Infinity || isNaN(display.value)){
         display.innerText = input;
         display.value = parseFloat(display.innerText);
     } else {
         display.innerText += input;
-        display.value = parseFloat(display.innerText);
+        display.value = Number(display.innerText);
     }
     if ((displayLastChar === '.' && display.innerText.length === 1)){
         display.innerText = `0.${input}`
@@ -60,7 +60,7 @@ function calculate(){
 
 function negative(){
     display.value = -(display.value);
-    display.innerText = `-(${display.innerText}`
+    display.innerText = `-${display.innerText}`
     ndValue = display.value
 }
 
