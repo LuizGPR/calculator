@@ -12,7 +12,7 @@ function insert(input){
         display.value = Number(display.innerText);
     }
     if ((displayLastChar === '.' && display.innerText.length === 1)){
-        display.innerText = `0.${input}`
+        display.innerText = `0.${input}`;
         display.value = input/10;
     }
     if(stValue !== 0 ){
@@ -31,21 +31,22 @@ function calculate(){
     switch (oprValue){
         case '+':
             rdValue = stValue + ndValue;
-            break
+            break;
         case '-':
             rdValue = stValue - ndValue;
-            break
+            break;
         case '*':
             rdValue = stValue * ndValue;
-            break
+            break;
         case '/':
             rdValue = stValue / ndValue;
-            break
+            break;
         case '^':
             rdValue = stValue ** ndValue;
-            break
+            break;
         case undefined:
-            rdValue
+            rdValue;
+            break;
     }
     if(isNaN(rdValue)){
         rdValue = 0;
@@ -63,8 +64,8 @@ function calculate(){
 
 function negative(){
     display.value = -(display.value);
-    display.innerText = display.value
-    ndValue = display.value
+    display.innerText = display.value;
+    ndValue = display.value;
 }
 
 function clearDisplay(){
@@ -72,9 +73,9 @@ function clearDisplay(){
 }
 
 function eraseDigit(){
-    stValue = ndValue
+    stValue = ndValue;
     display.innerText = display.innerText.slice(0, display.innerText.length-1);
-    display.value = parseFloat(display.innerText)
+    display.value = parseFloat(display.innerText);
     if(isNaN(display.value)){
         display.value = 0;
     }
